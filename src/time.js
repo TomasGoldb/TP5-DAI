@@ -19,4 +19,12 @@ app.get('/fecha-completa', (req, res) => {
     res.send(moment().format('MMMM Do YYYY, h:mm:ss a'));
 })
 
+app.use((req, res, next) => {
+    res.status(404).send(
+        `
+        <img src="https://http.cat/404">
+        `
+    )
+})
+
 export default app;
