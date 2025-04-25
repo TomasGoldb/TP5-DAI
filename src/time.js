@@ -15,9 +15,8 @@ app.get('/hora', (req, res) => {
     res.send(moment().format('hh:mm:ss'));
 })
 
-app.get('/fecha-completa', (req, res) => {  
-    let fecha=moment.tz("2014-06-01 12:00", "America/Buenos_Aires");
-    res.send(Date.now());
+app.get('/fecha-completa', (req, res) => { 
+    res.send(moment().format('MMMM Do YYYY, h:mm:ss a'));
 })
 
 export default app;
